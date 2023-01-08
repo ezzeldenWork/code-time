@@ -1,4 +1,5 @@
 .intro-section {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 90vh;
@@ -29,6 +30,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
     z-index: -1;
   }
   .intro-content {
@@ -77,9 +84,23 @@
   }
   .intro-img {
     position: relative;
+    .intro-img {
+      animation: scaleIn 1s linear infinite;
+      animation-delay: calc(var(--scroll) * -1s);
+      animation-play-state: paused;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      z-index: 1;
+    }
     .game {
+      z-index: 2;
       position: absolute;
       max-height: 100px;
+      animation: scaleOut 1s linear infinite;
+      animation-delay: calc(var(--scroll) * -1s);
+      animation-play-state: paused;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
       //   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.1));
       filter: drop-shadow(5px 9px 4px #00000021);
       &.game1 {
@@ -116,5 +137,22 @@
         justify-content: center;
       }
     }
+  }
+}
+
+@keyframes scaleOut {
+  to {
+    transform: scale(0.1) translateY(-10%);
+  }
+}
+@keyframes scaleIn {
+  to {
+    transform: scale(1.3) translateY(10%);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(40deg);
+    filter: blur(10px);
   }
 }

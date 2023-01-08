@@ -231,6 +231,7 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
   }
 }
 .intro-section {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 90vh;
@@ -262,6 +263,16 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   z-index: -1;
 }
 .intro-section .intro-content .intro-title {
@@ -302,9 +313,33 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
 .intro-section .intro-img {
   position: relative;
 }
+.intro-section .intro-img .intro-img {
+  -webkit-animation: scaleIn 1s linear infinite;
+          animation: scaleIn 1s linear infinite;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  z-index: 1;
+}
 .intro-section .intro-img .game {
+  z-index: 2;
   position: absolute;
   max-height: 100px;
+  -webkit-animation: scaleOut 1s linear infinite;
+          animation: scaleOut 1s linear infinite;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   filter: drop-shadow(5px 9px 4px rgba(0, 0, 0, 0.1294117647));
 }
 .intro-section .intro-img .game.game1 {
@@ -338,6 +373,38 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
     justify-content: center;
   }
 }
+@-webkit-keyframes scaleOut {
+  to {
+    transform: scale(0.1) translateY(-10%);
+  }
+}
+@keyframes scaleOut {
+  to {
+    transform: scale(0.1) translateY(-10%);
+  }
+}
+@-webkit-keyframes scaleIn {
+  to {
+    transform: scale(1.3) translateY(10%);
+  }
+}
+@keyframes scaleIn {
+  to {
+    transform: scale(1.3) translateY(10%);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(40deg);
+    filter: blur(10px);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(40deg);
+    filter: blur(10px);
+  }
+}
 .button-item a, .button-play a:after, .button-play a span, .header-section .open-icon i, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a {
   transition: 0.2s all ease-in-out;
-}/*# sourceMappingURL=style.css.map */
+}
