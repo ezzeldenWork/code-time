@@ -29,6 +29,24 @@ html[dir=rtl] body {
   font-family: "Almarai", sans-serif;
 }
 
+.section-60 {
+  margin: 60px 1px;
+}
+
+.gray-gradient {
+  background: linear-gradient(190deg, #4b4f67 50%, #2b2e3b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-gradient {
+  background: linear-gradient(190deg, #f1411d 50%, #cf3618 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .overlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.26);
@@ -90,6 +108,17 @@ html[dir=rtl] body {
   font-weight: 500;
   font-size: 18px;
   color: #4b4f67;
+}
+
+.section-title .sub-title {
+  color: #4b4f67;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+.section-title .min-title {
+  font-size: 30px;
+  font-weight: 900;
 }
 
 @media (max-width: 992px) {
@@ -280,20 +309,6 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
   font-weight: 900;
   display: inline-block;
   margin-bottom: 24px;
-}
-.intro-section .intro-content .intro-title .text1 {
-  background: black;
-  background: linear-gradient(190deg, #4b4f67 50%, #2b2e3b 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.intro-section .intro-content .intro-title .text2 {
-  background: black;
-  background: linear-gradient(190deg, #f1411d 50%, #cf3618 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .intro-section .intro-content .button-box {
   display: flex;

@@ -44,24 +44,6 @@
       font-weight: 900;
       display: inline-block;
       margin-bottom: 24px;
-      .text1 {
-        background: black;
-        background: linear-gradient(190deg, $color-gray 50%, $color-gray2 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .text2 {
-        background: black;
-        background: linear-gradient(
-          190deg,
-          $color-primary 50%,
-          $color-primary2 100%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
     }
 
     .button-box {

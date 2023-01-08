@@ -1,3 +1,19 @@
+.section-60 {
+  margin: 60px 1px;
+}
+
+.gray-gradient {
+  background: linear-gradient(190deg, $color-gray 50%, $color-gray2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.primary-gradient {
+  background: linear-gradient(190deg, $color-primary 50%, $color-primary2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .overlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.26);
@@ -77,6 +93,19 @@
       color: rgba($color-gray, 1);
       @extend%trans2;
     }
+  }
+}
+
+.section-title {
+  .sub-title {
+    color: rgba($color-gray, 1);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+  .min-title {
+    font-size: 30px;
+    font-weight: 900;
   }
 }
 
