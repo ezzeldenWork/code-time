@@ -59,20 +59,34 @@ html[dir=rtl] body {
 .button-play a {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
-.button-play a i {
+.button-play a:hover:after {
+  width: 110%;
+}
+.button-play a:hover span {
+  color: white;
+}
+.button-play a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
   width: 45px;
   height: 45px;
-  border-radius: 50%;
+  background: linear-gradient(90deg, #f1411d 0, #cf3618 100%);
+  border-radius: 50px;
+  right: -14px;
+}
+.button-play a i {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(90deg, #f1411d 0, #cf3618 100%);
 }
 .button-play a span {
-  margin: 6px;
+  margin: 20px;
   font-weight: 500;
   font-size: 18px;
   color: #4b4f67;
@@ -324,6 +338,6 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
     justify-content: center;
   }
 }
-.button-item a, .header-section .open-icon i, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a {
+.button-item a, .button-play a:after, .button-play a span, .header-section .open-icon i, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a {
   transition: 0.2s all ease-in-out;
 }/*# sourceMappingURL=style.css.map */

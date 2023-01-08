@@ -38,26 +38,44 @@
   a {
     display: flex;
     align-items: center;
-    i {
+    position: relative;
+    z-index: 1;
+    &:hover {
+      &:after {
+        width: 110%;
+      }
+      span {
+        color: rgba($color-white, 1);
+      }
+    }
+    &:after {
+      @extend%trans2;
+      content: "";
+      position: absolute;
+      z-index: -1;
       width: 45px;
       height: 45px;
-      border-radius: 50%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba($color-white, 1);
       background: linear-gradient(
         90deg,
         rgba($color-primary, 1) 0,
         rgba($color-primary2, 1) 100%
       );
+      border-radius: 50px;
+      right: -14px;
+    }
+    i {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba($color-white, 1);
     }
     span {
-      margin: 6px;
+      margin: 20px;
       font-weight: 500;
       font-size: 18px;
       color: rgba($color-gray, 1);
+      @extend%trans2;
     }
   }
 }
