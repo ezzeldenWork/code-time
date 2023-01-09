@@ -11,6 +11,13 @@ $(document).ready(function () {
     $(".header-section .nav-box").fadeOut();
   });
 
+  $(".testimonials-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    rtl: dir_d,
+    fade: true,
+  });
   $(".client-slider").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
