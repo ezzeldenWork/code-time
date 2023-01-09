@@ -510,6 +510,9 @@ html[dir=ltr] .banner-section .banner-content::before {
     height: 350px;
     width: 180px;
   }
+  .banner-section .banner-box .banner-content {
+    text-align: center;
+  }
   .banner-section .banner-box .banner-content::before {
     height: 72px;
     width: 42px;
