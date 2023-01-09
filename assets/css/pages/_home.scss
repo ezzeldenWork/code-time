@@ -2,37 +2,6 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-  height: 90vh;
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/SL_101619_24150_30-ai (1).png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    filter: blur(2px);
-    opacity: 0.2;
-    transform: rotateY(180deg);
-  }
-  &::after {
-    position: absolute;
-    content: "";
-    width: 80%;
-    height: 100%;
-    bottom: 0%;
-    left: 0%;
-    background-image: url("../img/line.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    @include animation-scroll(rotate);
-    z-index: -1;
-  }
   .intro-content {
     .intro-title {
       font-size: 65px;
@@ -63,7 +32,6 @@
     position: relative;
     .intro-img {
       @include animation-scroll(scaleIn);
-      z-index: 1;
     }
     .game {
       z-index: 2;
@@ -91,6 +59,7 @@
 
 .services-section {
   .services-box {
+    text-align: center;
     @extend%trans2;
     padding: 60px 20px;
     border: 1px solid rgba($color-gray, 0.4);
@@ -111,7 +80,7 @@
     }
     .services-title {
       font-weight: 800;
-      font-size: 30px;
+      font-size: 25px;
       @extend%trans2;
       margin-bottom: 30px;
     }
@@ -199,6 +168,55 @@
     .prag {
       line-height: 1.8;
       margin-bottom: 40px;
+    }
+  }
+}
+
+.all-services-section {
+  .services-item {
+    margin-bottom: 24px;
+    padding: 40px 20px;
+    border: 1px solid rgba($color-gray, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend%trans4;
+    position: relative;
+    &::before {
+      background-color: rgba($color-white, 1);
+      inset: 0;
+      position: absolute;
+      content: "";
+      @extend%trans4;
+    }
+    &:after {
+      content: attr(data-title);
+      position: absolute;
+      inset: 0;
+      font-size: 30px;
+      @extend%trans4;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @extend.gray-gradient-text;
+    }
+    &:hover {
+      padding: 40px 40px;
+      border: 1px solid rgba($color-gray, 0);
+      box-shadow: -15px 50px 50px rgba($color-gray, 0.1);
+      &:after,
+      &::before {
+        opacity: 0;
+      }
+    }
+    .services-name {
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .services-img {
+      height: 80px;
     }
   }
 }

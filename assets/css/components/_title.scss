@@ -1,5 +1,10 @@
 .section-title {
   padding-bottom: 30px;
+  &.white-item {
+    .sub-title {
+      color: rgba($color-white, 1);
+    }
+  }
   .sub-title {
     color: rgba($color-gray, 1);
     font-size: 14px;
