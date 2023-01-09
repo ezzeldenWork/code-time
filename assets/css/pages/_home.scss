@@ -395,4 +395,31 @@
       }
     }
   }
+
+  .testimonials-section {
+    .testimonials-slider {
+      .testimonials-item {
+        text-align: center;
+        .testimonials-img {
+          text-align: center;
+          padding-bottom: 24px;
+          img {
+            height: 200px;
+            margin: 0 auto;
+          }
+        }
+        .testimonials-content {
+          .prag {
+            font-size: 16px;
+          }
+          .testimonials-name {
+            font-size: 20px;
+          }
+          .testimonials-jop {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }

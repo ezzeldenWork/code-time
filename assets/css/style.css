@@ -626,6 +626,26 @@ html[dir=ltr] .banner-section .banner-content::before {
   .client-section .client-slider .client-slider-item img {
     height: 60px;
   }
+  .testimonials-section .testimonials-slider .testimonials-item {
+    text-align: center;
+  }
+  .testimonials-section .testimonials-slider .testimonials-item .testimonials-img {
+    text-align: center;
+    padding-bottom: 24px;
+  }
+  .testimonials-section .testimonials-slider .testimonials-item .testimonials-img img {
+    height: 200px;
+    margin: 0 auto;
+  }
+  .testimonials-section .testimonials-slider .testimonials-item .testimonials-content .prag {
+    font-size: 16px;
+  }
+  .testimonials-section .testimonials-slider .testimonials-item .testimonials-content .testimonials-name {
+    font-size: 20px;
+  }
+  .testimonials-section .testimonials-slider .testimonials-item .testimonials-content .testimonials-jop {
+    font-size: 16px;
+  }
 }
 .section-title {
   padding-bottom: 30px;
