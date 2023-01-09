@@ -30,12 +30,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    animation: rotate 1s linear infinite;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
-
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
+    @include animation-scroll(rotate);
     z-index: -1;
   }
   .intro-content {
@@ -67,22 +62,14 @@
   .intro-img {
     position: relative;
     .intro-img {
-      animation: scaleIn 1s linear infinite;
-      animation-delay: calc(var(--scroll) * -1s);
-      animation-play-state: paused;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
+      @include animation-scroll(scaleIn);
       z-index: 1;
     }
     .game {
       z-index: 2;
       position: absolute;
       max-height: 100px;
-      animation: scaleOut 1s linear infinite;
-      animation-delay: calc(var(--scroll) * -1s);
-      animation-play-state: paused;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
+      @include animation-scroll(scaleOut);
       //   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.1));
       filter: drop-shadow(5px 9px 4px #00000021);
       &.game1 {
@@ -99,23 +86,6 @@
         bottom: -50px;
       }
     }
-  }
-}
-
-@keyframes scaleOut {
-  to {
-    transform: scale(0.1) translateY(-10%);
-  }
-}
-@keyframes scaleIn {
-  to {
-    transform: scale(1.3) translateY(10%);
-  }
-}
-@keyframes rotate {
-  to {
-    transform: rotate(40deg);
-    filter: blur(10px);
   }
 }
 
@@ -147,6 +117,86 @@
     }
     .prag {
       line-height: 1.8;
+    }
+  }
+}
+
+.banner-section {
+  .banner-box {
+    position: relative;
+    z-index: 1;
+    padding: 60px;
+    &::before {
+      border-radius: 30px;
+      content: "";
+      position: absolute;
+      height: 70%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      left: 0;
+      background-color: transparent;
+      background-image: linear-gradient(
+        0deg,
+        rgba($color-gray2, 0.05) 100%,
+        rgba($color-gray, 0.05) 0%
+      );
+      z-index: -1;
+    }
+  }
+  .img-box {
+    img {
+      height: 591px;
+      object-fit: cover;
+      width: 584px;
+      @include animation-scroll(translate-position);
+    }
+  }
+  .banner-content {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: -61px;
+      @include dir(rtl) {
+        right: 20px;
+      }
+      @include dir(ltr) {
+        left: 20px;
+      }
+      height: 80px;
+      width: 80px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url("../img/Pen-Left.png");
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -61px;
+      @include dir(rtl) {
+        right: 174px;
+      }
+      @include dir(ltr) {
+        left: 174px;
+      }
+      height: 140px;
+      width: 140px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url("../img/Gift-Left.png");
+      @include animation-scroll(scaleIn);
+    }
+    .banner-title {
+      font-size: 44px;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+    .prag {
+      line-height: 1.8;
+      margin-bottom: 40px;
     }
   }
 }

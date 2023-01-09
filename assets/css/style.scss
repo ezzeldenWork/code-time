@@ -2,9 +2,11 @@
 @import "./color/var";
 @import "./minStyle/default";
 @import "./minStyle/minClass";
+@import "./minStyle/keyframes";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./pages/home";
 @import "./components/title";
+@import "./components/button";
 
 @import "./minStyle/extend";
