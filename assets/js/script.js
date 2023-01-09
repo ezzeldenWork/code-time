@@ -5,10 +5,14 @@ $(document).ready(function () {
     var dir_d = false;
   }
   $(".header-section .open-icon").click(function () {
-    $(".header-section .nav-box").fadeIn();
+    $(".header-section .nav-box").addClass("open-menu");
+    $("body").addClass("over-flow");
+    $(".overlay").fadeIn();
   });
-  $(".header-section .nav-box .close-icon").click(function () {
-    $(".header-section .nav-box").fadeOut();
+  $(".header-section .nav-box .close-icon, .overlay").click(function () {
+    $(".header-section .nav-box").removeClass("open-menu");
+    $("body").removeClass("over-flow");
+    $(".overlay").fadeOut();
   });
 
   $(".testimonials-slider").slick({
@@ -16,6 +20,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     rtl: dir_d,
+    autoplay: true,
     fade: true,
   });
   $(".client-slider").slick({

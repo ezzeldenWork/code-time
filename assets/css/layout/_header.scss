@@ -16,7 +16,9 @@
     }
 
     .nav-list {
+      width: 100%;
       ul {
+        justify-content: center;
         li {
           a {
             padding: 0 0 10px;
@@ -110,7 +112,7 @@
       }
     }
     .nav-box {
-      display: none;
+      display: block;
       .close-icon {
         display: block;
         position: absolute;
@@ -129,19 +131,31 @@
       position: fixed;
       top: 0;
       padding: 60px;
-      width: 100%;
+      width: 223px;
       height: 100%;
       background: linear-gradient(
         90deg,
         rgba($color-gray, 1) 0,
         rgba($color-gray2, 1) 100%
       );
+      transition: 0.2s all ease-in-out;
       z-index: 999999;
       @include dir(rtl) {
-        right: 0;
+        right: -230px;
+
+        box-shadow: -6px 1px 12px rgba($color-black, 0.3);
       }
       @include dir(ltr) {
-        left: 0;
+        left: -230px;
+        box-shadow: 6px 1px 12px rgba($color-black, 0.3);
+      }
+      &.open-menu {
+        @include dir(rtl) {
+          right: 0;
+        }
+        @include dir(ltr) {
+          left: 0;
+        }
       }
       .icon-box {
         ul {

@@ -24,9 +24,13 @@ ul {
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(90deg, rgba(75, 79, 103, 0.05) 0, rgba(43, 46, 59, 0.05) 100%);
 }
 html[dir=rtl] body {
   font-family: "Almarai", sans-serif;
+}
+body.over-flow {
+  overflow-y: hidden;
 }
 
 .section-60 {
@@ -135,6 +139,12 @@ html[dir=rtl] body {
 .header-section .nav-box .close-icon {
   display: none;
 }
+.header-section .nav-box .nav-list {
+  width: 100%;
+}
+.header-section .nav-box .nav-list ul {
+  justify-content: center;
+}
 .header-section .nav-box .nav-list ul li a {
   padding: 0 0 10px;
   position: relative;
@@ -206,13 +216,14 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
     color: #f1411d;
   }
   .header-section .nav-box {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     padding: 60px;
-    width: 100%;
+    width: 223px;
     height: 100%;
     background: linear-gradient(90deg, #4b4f67 0, #2b2e3b 100%);
+    transition: 0.2s all ease-in-out;
     z-index: 999999;
   }
   .header-section .nav-box .close-icon {
@@ -231,9 +242,17 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
     right: 14px;
   }
   html[dir=rtl] .header-section .nav-box {
-    right: 0;
+    right: -230px;
+    box-shadow: -6px 1px 12px rgba(0, 0, 0, 0.3);
   }
   html[dir=ltr] .header-section .nav-box {
+    left: -230px;
+    box-shadow: 6px 1px 12px rgba(0, 0, 0, 0.3);
+  }
+  html[dir=rtl] .header-section .nav-box.open-menu {
+    right: 0;
+  }
+  html[dir=ltr] .header-section .nav-box.open-menu {
     left: 0;
   }
   .header-section .nav-box .icon-box ul {
@@ -281,6 +300,7 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
 }
 .intro-section .intro-img {
   position: relative;
+  text-align: end;
 }
 .intro-section .intro-img .intro-img {
   -webkit-animation: scaleIn 1s linear infinite;
@@ -467,6 +487,7 @@ html[dir=ltr] .banner-section .banner-content::before {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-color: white;
 }
 .all-services-section .services-item::before {
   background-color: white;
@@ -542,7 +563,7 @@ html[dir=ltr] .banner-section .banner-content::before {
 
 @media (max-width: 992px) {
   .intro-section .intro-img {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align: center;
   }
   .intro-section .intro-img .game.game2 {

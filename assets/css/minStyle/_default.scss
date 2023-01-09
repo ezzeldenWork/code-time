@@ -23,9 +23,20 @@ ul {
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(
+    90deg,
+    rgba($color-gray, 0.05) 0,
+    rgba($color-gray2, 0.05) 100%
+  );
+  // background-size: contain;
+  // background-image: url("../img/backimg.png");
   @include dir(rtl) {
     font-family: "Almarai", sans-serif;
   }
   // @include dir(ltr) {
   // }
+
+  &.over-flow {
+    overflow-y: hidden;
+  }
 }
