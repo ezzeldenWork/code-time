@@ -136,6 +136,7 @@ body.over-flow {
   align-items: center;
   justify-content: space-between;
 }
+.header-section .nav-box .icon-box,
 .header-section .nav-box .close-icon {
   display: none;
 }
@@ -196,6 +197,43 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
 .header-section .nav-box ul li a:hover:after {
   width: 50%;
 }
+.header-section .icon-box-side ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+html[dir=rtl] .header-section .icon-box-side ul li {
+  padding-left: 24px;
+}
+html[dir=rtl] .header-section .icon-box-side ul li:last-of-type {
+  padding: 0;
+}
+html[dir=ltr] .header-section .icon-box-side ul li {
+  padding-right: 24px;
+}
+html[dir=ltr] .header-section .icon-box-side ul li:last-of-type {
+  padding: 0;
+}
+.header-section .icon-box-side ul li.current-menu-item a {
+  color: #f1411d;
+  font-weight: 700;
+}
+.header-section .icon-box-side ul li.current-menu-item a:after {
+  width: 50%;
+}
+.header-section .icon-box-side ul li a {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4b4f67;
+}
+.header-section .icon-box-side ul li a:hover {
+  color: #f1411d;
+}
+.header-section .icon-box-side ul li a:hover:after {
+  width: 50%;
+}
 
 @media (max-width: 992px) {
   .header-section .nav-box ul li a {
@@ -203,6 +241,9 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
   }
 }
 @media (max-width: 772px) {
+  .header-section .icon-box-side {
+    display: none;
+  }
   .header-section .open-icon {
     display: block;
     text-align: end;
@@ -226,6 +267,20 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
     transition: 0.2s all ease-in-out;
     z-index: 999999;
   }
+  html[dir=rtl] .header-section .nav-box {
+    right: -230px;
+    box-shadow: -6px 1px 12px rgba(0, 0, 0, 0.3);
+  }
+  html[dir=ltr] .header-section .nav-box {
+    left: -230px;
+    box-shadow: 6px 1px 12px rgba(0, 0, 0, 0.3);
+  }
+  html[dir=rtl] .header-section .nav-box.open-menu {
+    right: 0;
+  }
+  html[dir=ltr] .header-section .nav-box.open-menu {
+    left: 0;
+  }
   .header-section .nav-box .close-icon {
     display: block;
     position: absolute;
@@ -241,19 +296,8 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
   html[dir=ltr] .header-section .nav-box .close-icon {
     right: 14px;
   }
-  html[dir=rtl] .header-section .nav-box {
-    right: -230px;
-    box-shadow: -6px 1px 12px rgba(0, 0, 0, 0.3);
-  }
-  html[dir=ltr] .header-section .nav-box {
-    left: -230px;
-    box-shadow: 6px 1px 12px rgba(0, 0, 0, 0.3);
-  }
-  html[dir=rtl] .header-section .nav-box.open-menu {
-    right: 0;
-  }
-  html[dir=ltr] .header-section .nav-box.open-menu {
-    left: 0;
+  .header-section .nav-box .icon-box {
+    display: block;
   }
   .header-section .nav-box .icon-box ul {
     display: flex;
@@ -759,6 +803,6 @@ html[dir=ltr] .banner-section .banner-content::before {
   transition: 0.4s all ease-in-out;
 }
 
-.header-section .open-icon i, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a, .services-section .services-box, .services-section .services-box .services-title, .button-item a, .button-play a:after, .button-play a span {
+.header-section .open-icon i, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a, .header-section .icon-box-side ul li a, .services-section .services-box, .services-section .services-box .services-title, .button-item a, .button-play a:after, .button-play a span {
   transition: 0.2s all ease-in-out;
 }
