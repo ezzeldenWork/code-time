@@ -120,6 +120,7 @@
 }
 
 .services-section {
+  overflow-x: hidden;
   .services-box {
     @extend%trans2;
     padding: 60px 20px;
