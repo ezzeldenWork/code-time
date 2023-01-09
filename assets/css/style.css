@@ -68,12 +68,12 @@ html[dir=rtl] body {
 }
 @-webkit-keyframes scaleIn {
   to {
-    transform: scale(1.3) translateY(10%);
+    transform: scale(1.3) translateY(20%);
   }
 }
 @keyframes scaleIn {
   to {
-    transform: scale(1.3) translateY(10%);
+    transform: scale(1.3) translateY(20%);
   }
 }
 @-webkit-keyframes rotate {
