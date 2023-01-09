@@ -514,6 +514,7 @@ html[dir=ltr] .banner-section .banner-content::before {
 @media (max-width: 992px) {
   .intro-section .intro-img {
     margin-bottom: 60px;
+    text-align: center;
   }
   .intro-section .intro-img .game.game2 {
     max-height: 139px;
