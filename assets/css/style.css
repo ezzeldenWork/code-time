@@ -98,6 +98,28 @@ html[dir=rtl] body {
     transform: translateX(20%) scale(1.2);
   }
 }
+@-webkit-keyframes rotate-location {
+  to {
+    transform: rotate(-180deg) translateX(20%);
+  }
+}
+@keyframes rotate-location {
+  to {
+    transform: rotate(-180deg) translateX(20%);
+  }
+}
+@media (max-width: 772px) {
+  @-webkit-keyframes translate-position {
+    to {
+      transform: translatey(-10%) scale(1.33);
+    }
+  }
+  @keyframes translate-position {
+    to {
+      transform: translatey(-10%) scale(1.33);
+    }
+  }
+}
 .header-section {
   position: relative;
   padding: 24px 0;
@@ -421,6 +443,16 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   background-size: cover;
   background-position: center;
   background-image: url("../img/Pen-Left.png");
+  -webkit-animation: rotate-location 1s linear infinite;
+          animation: rotate-location 1s linear infinite;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 html[dir=rtl] .banner-section .banner-content:after {
   right: 20px;

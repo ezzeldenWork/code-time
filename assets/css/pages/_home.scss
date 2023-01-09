@@ -171,6 +171,7 @@
       background-size: cover;
       background-position: center;
       background-image: url("../img/Pen-Left.png");
+      @include animation-scroll(rotate-location);
     }
     &::before {
       content: "";

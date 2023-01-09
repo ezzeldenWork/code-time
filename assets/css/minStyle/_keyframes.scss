@@ -19,3 +19,16 @@
     transform: translateX(20%) scale(1.2);
   }
 }
+@keyframes rotate-location {
+  to {
+    transform: rotate(-180deg) translateX(20%);
+  }
+}
+
+@media (max-width: 772px) {
+  @keyframes translate-position {
+    to {
+      transform: translatey(-10%) scale(1.33);
+    }
+  }
+}
