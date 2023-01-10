@@ -767,6 +767,35 @@ html[dir=ltr] .banner-section .banner-content::before {
     font-size: 16px;
   }
 }
+.our-mission .section-img {
+  position: relative;
+  z-index: 1;
+}
+.our-mission .section-img:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  background-image: url("../img/about-img.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 330px;
+  height: 330px;
+  z-index: -1;
+}
+html[dir=rtl] .our-mission .section-img:after {
+  right: -24px;
+}
+html[dir=ltr] .our-mission .section-img:after {
+  left: -24px;
+}
+.our-mission .section-img img {
+  height: 400px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
 .section-title {
   padding-bottom: 30px;
 }
