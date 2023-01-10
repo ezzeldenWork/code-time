@@ -973,7 +973,7 @@ html[dir=rtl] .newslatter-section .newslatter-box::after {
 
 @media (max-width: 772px) {
   .newslatter-section .newslatter-box {
-    padding: 30px;
+    padding: 30px 15px;
   }
   .newslatter-section .newslatter-box::after {
     height: 80px;
@@ -988,6 +988,10 @@ html[dir=rtl] .newslatter-section .newslatter-box::after {
   }
   .newslatter-section .newslatter-box .newslatter-title {
     font-size: 22px;
+  }
+  .newslatter-section .newslatter-box .newslatter-form form {
+    width: 100%;
+    justify-content: space-between;
   }
   .newslatter-section .newslatter-box .newslatter-form form input {
     width: 150px;

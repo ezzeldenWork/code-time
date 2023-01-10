@@ -70,7 +70,7 @@
 @media (max-width: 772px) {
   .newslatter-section {
     .newslatter-box {
-      padding: 30px;
+      padding: 30px 15px;
       &::after {
         height: 80px;
         width: 80px;
@@ -88,6 +88,8 @@
 
       .newslatter-form {
         form {
+          width: 100%;
+          justify-content: space-between;
           input {
             width: 150px;
           }
