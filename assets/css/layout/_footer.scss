@@ -4,6 +4,7 @@
   z-index: 1;
   background-color: rgba($color-gray, 0.05);
   &:after {
+    z-index: -1;
     inset: 0;
     background-image: url("../img/footer-img.svg");
     background-size: cover;
@@ -12,7 +13,6 @@
     opacity: 0.2;
     content: "";
     position: absolute;
-    z-index: -1;
   }
 
   .footer-prag {
@@ -38,7 +38,7 @@
           top: 50%;
           transform: translateY(-50%);
           height: 2px;
-          width: 15px;
+          width: 10px;
           background-color: $color-gray;
           position: absolute;
           @include dir(ltr) {
@@ -50,7 +50,7 @@
         }
         a {
           font-weight: 700;
-          font-size: 18px;
+          font-size: 16px;
           color: rgba($color-gray, 1);
           @extend%trans4;
           &:hover {
