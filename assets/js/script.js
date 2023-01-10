@@ -21,6 +21,7 @@ $(document).ready(function () {
     arrows: false,
     rtl: dir_d,
     autoplay: true,
+    autoplaySpeed: 2000,
     fade: true,
   });
   $(".client-slider").slick({

@@ -16,7 +16,7 @@
 }
 @keyframes translate-position {
   to {
-    transform: translateX(20%) scale(1.2);
+    transform: translateX(30%) scale(1.2);
   }
 }
 @keyframes rotate-location {
@@ -24,11 +24,16 @@
     transform: rotate(-180deg) translateX(20%);
   }
 }
+@keyframes rotate-location-revers {
+  to {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
 
 @media (max-width: 772px) {
   @keyframes translate-position {
     to {
-      transform: translatey(-10%) scale(1.33);
+      transform: translateY(-10%) scale(1.33);
     }
   }
 }
