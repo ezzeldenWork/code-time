@@ -11,7 +11,8 @@
       @include dir(ltr) {
         left: -24px;
       }
-      bottom: -20px;
+      top: 30%;
+      transform: translateY(-50%);
       background-image: url("../img/about-img.svg");
       background-repeat: no-repeat;
       background-size: contain;
@@ -20,10 +21,55 @@
       z-index: -1;
     }
     img {
-      height: 400px;
-      width: 400px;
+      height: 500px;
+      width: 100%;
+      max-height: 100%;
+      // width: 400px;
       object-fit: cover;
       border-radius: 50%;
+    }
+  }
+  .mission-content {
+    .title {
+      font-size: 44px;
+      font-weight: 900;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.count-section {
+  .count-box {
+    @extend%shadow-box;
+    padding: 60px !important;
+    .number {
+      font-size: 80px;
+      font-weight: 900;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      color: $color-gray;
+      padding: 24px 0;
+    }
+    .prag {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .count-section {
+    .count-box {
+      text-align: center;
+      padding: 40px !important;
+      .number {
+        font-size: 50px;
+      }
+      .title {
+        font-size: 14px;
+        padding: 12px 0 36px;
+      }
     }
   }
 }

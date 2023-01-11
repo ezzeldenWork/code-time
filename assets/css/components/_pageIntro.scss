@@ -48,3 +48,61 @@
     }
   }
 }
+@media (max-width: 992px) {
+  .sub-intro-section {
+    .intro-box {
+      &::after {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+  .our-mission {
+    .section-img {
+      &:after {
+        width: 200px;
+        height: 200px;
+      }
+      img {
+        height: 317px;
+        width: 317px;
+      }
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .sub-intro-section {
+    .intro-box {
+      &::after {
+        z-index: -1;
+        height: 50px;
+        width: 50px;
+        top: -0px;
+        @include dir(ltr) {
+          right: 40px;
+        }
+        @include dir(rtl) {
+          left: 40px;
+        }
+      }
+    }
+  }
+  .our-mission {
+    .mission-content {
+      padding-top: 24px;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+    .section-img {
+      text-align: center;
+      &:after {
+        width: 200px;
+        height: 200px;
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

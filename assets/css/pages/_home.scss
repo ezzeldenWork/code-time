@@ -61,19 +61,8 @@
 
 .services-section {
   .services-box {
+    @extend%shadow-box;
     text-align: center;
-    @extend%trans2;
-    padding: 60px 20px;
-    border: 1px solid rgba($color-gray, 0.4);
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    height: calc(100% - 20px);
-    background-color: rgba($color-white, 1);
-    &:hover {
-      border: 1px solid rgba($color-gray, 0);
-      box-shadow: -15px 50px 50px rgba($color-gray, 0.1);
-    }
     .services-icon {
       margin-bottom: 30px;
       img {
