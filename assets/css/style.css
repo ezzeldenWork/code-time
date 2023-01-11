@@ -138,7 +138,6 @@ body.over-flow {
 .header-section {
   position: relative;
   padding: 24px 0;
-  z-index: 99;
 }
 .header-section .open-icon {
   display: none;
