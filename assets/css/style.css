@@ -1054,7 +1054,6 @@ html[dir=rtl] .newslatter-section .newslatter-box::after {
 @media (max-width: 772px) {
   .newslatter-section .newslatter-box {
     padding: 30px 15px;
-    z-index: 1;
   }
   .newslatter-section .newslatter-box::after {
     z-index: -1;
