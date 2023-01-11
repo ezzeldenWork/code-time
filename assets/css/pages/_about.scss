@@ -1,7 +1,16 @@
-.our-mission {
+.content-section {
   .section-img {
     position: relative;
     z-index: 1;
+    &::before {
+      background-color: #dbdbdb;
+      height: 10px;
+      position: absolute;
+      filter: blur(10px);
+      bottom: -10px;
+      width: 100%;
+      content: "";
+    }
     &:after {
       content: "";
       position: absolute;
@@ -33,7 +42,10 @@
     .title {
       font-size: 44px;
       font-weight: 900;
-      padding-bottom: 24px;
+    }
+    .prag {
+      padding: 0 0 30px;
+      font-size: 20px;
     }
   }
 }

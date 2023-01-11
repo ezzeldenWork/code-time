@@ -775,11 +775,20 @@ html[dir=ltr] .banner-section .banner-content::before {
     font-size: 16px;
   }
 }
-.our-mission .section-img {
+.content-section .section-img {
   position: relative;
   z-index: 1;
 }
-.our-mission .section-img:after {
+.content-section .section-img::before {
+  background-color: #dbdbdb;
+  height: 10px;
+  position: absolute;
+  filter: blur(10px);
+  bottom: -10px;
+  width: 100%;
+  content: "";
+}
+.content-section .section-img:after {
   content: "";
   position: absolute;
   top: 30%;
@@ -791,13 +800,13 @@ html[dir=ltr] .banner-section .banner-content::before {
   height: 330px;
   z-index: -1;
 }
-html[dir=rtl] .our-mission .section-img:after {
+html[dir=rtl] .content-section .section-img:after {
   right: -24px;
 }
-html[dir=ltr] .our-mission .section-img:after {
+html[dir=ltr] .content-section .section-img:after {
   left: -24px;
 }
-.our-mission .section-img img {
+.content-section .section-img img {
   height: 500px;
   width: 100%;
   max-height: 100%;
@@ -805,10 +814,13 @@ html[dir=ltr] .our-mission .section-img:after {
      object-fit: cover;
   border-radius: 50%;
 }
-.our-mission .mission-content .title {
+.content-section .mission-content .title {
   font-size: 44px;
   font-weight: 900;
-  padding-bottom: 24px;
+}
+.content-section .mission-content .prag {
+  padding: 0 0 30px;
+  font-size: 20px;
 }
 
 .count-section .count-box {
@@ -1156,11 +1168,11 @@ html[dir=rtl] .sub-intro-section .intro-box::after {
     height: 80px;
     width: 80px;
   }
-  .our-mission .section-img:after {
+  .content-section .section-img:after {
     width: 200px;
     height: 200px;
   }
-  .our-mission .section-img img {
+  .content-section .section-img img {
     height: 317px;
     width: 317px;
   }
@@ -1178,19 +1190,19 @@ html[dir=rtl] .sub-intro-section .intro-box::after {
   html[dir=rtl] .sub-intro-section .intro-box::after {
     left: 40px;
   }
-  .our-mission .mission-content {
+  .content-section .mission-content {
     padding-top: 24px;
     padding-bottom: 30px;
     text-align: center;
   }
-  .our-mission .section-img {
+  .content-section .section-img {
     text-align: center;
   }
-  .our-mission .section-img:after {
+  .content-section .section-img:after {
     width: 200px;
     height: 200px;
   }
-  .our-mission .section-img img {
+  .content-section .section-img img {
     margin: 0 auto;
   }
 }
