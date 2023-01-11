@@ -15,10 +15,10 @@
       content: "";
       position: absolute;
       @include dir(rtl) {
-        right: -24px;
+        right: 0;
       }
       @include dir(ltr) {
-        left: -24px;
+        left: 0;
       }
       top: 30%;
       transform: translateY(-50%);

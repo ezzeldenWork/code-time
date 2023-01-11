@@ -801,10 +801,10 @@ html[dir=ltr] .banner-section .banner-content::before {
   z-index: -1;
 }
 html[dir=rtl] .content-section .section-img:after {
-  right: -24px;
+  right: 0;
 }
 html[dir=ltr] .content-section .section-img:after {
-  left: -24px;
+  left: 0;
 }
 .content-section .section-img img {
   height: 500px;
