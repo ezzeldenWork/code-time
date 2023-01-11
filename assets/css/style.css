@@ -250,11 +250,11 @@ html[dir=ltr] .header-section .nav-box ul li:last-of-type {
     z-index: 999999;
   }
   html[dir=rtl] .header-section .nav-box {
-    right: -230px;
+    right: -280px;
     box-shadow: -6px 1px 12px rgba(0, 0, 0, 0.3);
   }
   html[dir=ltr] .header-section .nav-box {
-    left: -230px;
+    left: -280px;
     box-shadow: 6px 1px 12px rgba(0, 0, 0, 0.3);
   }
   html[dir=rtl] .header-section .nav-box.open-menu {
