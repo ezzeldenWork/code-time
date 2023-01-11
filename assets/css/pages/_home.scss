@@ -208,15 +208,13 @@
         color: rgba($color-white, 1);
         font-size: 24px;
         font-weight: 700;
-        transition: opacity 0.2s 0.2s ease-in-out,
-          transform 0.1s ease-in-out 0.2s;
+        transition: opacity 0.2s 0.2s ease-in, transform 0.2s ease-in 0.2s;
         opacity: 0;
         transform: translateY(10px);
       }
       .prag {
         color: rgba($color-lightGray, 1);
-        transition: opacity 0.3s 0.2s ease-in-out,
-          transform 0.2s ease-in-out 0.3s;
+        transition: opacity 0.3s 0.2s ease-in, transform 0.2s ease-in 0.3s;
         opacity: 0;
         transform: translateY(10px);
       }
