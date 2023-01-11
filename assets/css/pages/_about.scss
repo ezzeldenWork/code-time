@@ -2,15 +2,6 @@
   .section-img {
     position: relative;
     z-index: 1;
-    &::before {
-      background-color: #dbdbdb;
-      height: 10px;
-      position: absolute;
-      filter: blur(10px);
-      bottom: -10px;
-      width: 100%;
-      content: "";
-    }
     &:after {
       content: "";
       position: absolute;
