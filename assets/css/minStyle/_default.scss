@@ -28,8 +28,9 @@ body {
     rgba($color-gray, 0.05) 0,
     rgba($color-gray2, 0.05) 100%
   );
-  // background-size: contain;
-  // background-image: url("../img/backimg.png");
+
+  // background-size: cover;
+  // background-image: url("../img/body-img.png");
   @include dir(rtl) {
     font-family: "Almarai", sans-serif;
   }

@@ -68,19 +68,31 @@
   }
 }
 
+@media (max-width: 992px) {
+  .newslatter-section {
+    .newslatter-box {
+      &::after {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+}
 @media (max-width: 772px) {
   .newslatter-section {
     .newslatter-box {
       padding: 30px 15px;
+      z-index: 1;
       &::after {
-        height: 80px;
-        width: 80px;
+        z-index: -1;
+        height: 50px;
+        width: 50px;
         top: -56px;
         @include dir(ltr) {
-          right: 0px;
+          right: 40px;
         }
         @include dir(rtl) {
-          left: 0px;
+          left: 40px;
         }
       }
       .newslatter-title {

@@ -19,7 +19,19 @@
       width: 100%;
       ul {
         justify-content: center;
+        &:hover {
+          li {
+            opacity: 0.5;
+          }
+        }
         li {
+          @extend%trans2;
+          &:hover,
+          &.current-menu-item {
+            transform: scale(1.05);
+            opacity: 1;
+          }
+
           a {
             padding: 0 0 10px;
             position: relative;

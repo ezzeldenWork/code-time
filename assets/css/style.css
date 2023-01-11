@@ -33,7 +33,7 @@ body.over-flow {
   overflow-y: hidden;
 }
 
-.section-60 {
+.section-30 {
   padding: 30px 0px;
 }
 
@@ -155,6 +155,13 @@ body.over-flow {
 }
 .header-section .nav-box .nav-list ul {
   justify-content: center;
+}
+.header-section .nav-box .nav-list ul:hover li {
+  opacity: 0.5;
+}
+.header-section .nav-box .nav-list ul li:hover, .header-section .nav-box .nav-list ul li.current-menu-item {
+  transform: scale(1.05);
+  opacity: 1;
 }
 .header-section .nav-box .nav-list ul li a {
   padding: 0 0 10px;
@@ -486,8 +493,7 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   transform: translateY(-50%);
   width: 100%;
   left: 0;
-  background-color: transparent;
-  background-image: linear-gradient(0deg, rgba(43, 46, 59, 0.05) 100%, rgba(75, 79, 103, 0.05) 0%);
+  background-color: #e9e9eb;
   z-index: -1;
 }
 .banner-section .img-box {
@@ -1002,20 +1008,28 @@ html[dir=rtl] .newslatter-section .newslatter-box::after {
   color: white;
 }
 
-@media (max-width: 772px) {
-  .newslatter-section .newslatter-box {
-    padding: 30px 15px;
-  }
+@media (max-width: 992px) {
   .newslatter-section .newslatter-box::after {
     height: 80px;
     width: 80px;
+  }
+}
+@media (max-width: 772px) {
+  .newslatter-section .newslatter-box {
+    padding: 30px 15px;
+    z-index: 1;
+  }
+  .newslatter-section .newslatter-box::after {
+    z-index: -1;
+    height: 50px;
+    width: 50px;
     top: -56px;
   }
   html[dir=ltr] .newslatter-section .newslatter-box::after {
-    right: 0px;
+    right: 40px;
   }
   html[dir=rtl] .newslatter-section .newslatter-box::after {
-    left: 0px;
+    left: 40px;
   }
   .newslatter-section .newslatter-box .newslatter-title {
     font-size: 22px;
@@ -1093,6 +1107,6 @@ html[dir=rtl] .sub-intro-section .intro-box::after {
   transition: 0.4s all ease-in-out;
 }
 
-.header-section .open-icon i, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a, .services-section .services-box, .services-section .services-box .services-title, .button-item a, .button-play a:after, .button-play a span, .icon-box-side ul li a {
+.header-section .open-icon i, .header-section .nav-box .nav-list ul li, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a, .services-section .services-box, .services-section .services-box .services-title, .button-item a, .button-play a:after, .button-play a span, .icon-box-side ul li a {
   transition: 0.2s all ease-in-out;
 }
