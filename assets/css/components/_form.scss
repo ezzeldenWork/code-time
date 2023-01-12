@@ -1,0 +1,30 @@
+.contact-fom {
+  label {
+    color: $color-gray2 !important;
+    margin-bottom: 10px !important;
+  }
+  input {
+    border-radius: 50px !important;
+  }
+  textarea {
+    border-radius: 10px !important;
+  }
+  button {
+    padding: 10px 48px !important;
+    display: inline-block !important;
+
+    background: linear-gradient(
+      90deg,
+      rgba($color-gray, 1) 0,
+      rgba($color-gray2, 1) 100%
+    ) !important;
+    border-radius: 50px !important;
+    color: rgba($color-white, 1) !important;
+    box-shadow: rgba($color-gray, 0.3) 4px 4px 0px !important;
+    @extend%trans2;
+    &:active {
+      transform: translate(4px, 4px) !important;
+      box-shadow: rgba($color-gray, 0.3) 0px 0px 0px !important;
+    }
+  }
+}

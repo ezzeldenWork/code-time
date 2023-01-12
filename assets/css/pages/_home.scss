@@ -63,6 +63,7 @@
   .services-box {
     @extend%shadow-box;
     text-align: center;
+    justify-content: space-between;
     .services-icon {
       margin-bottom: 30px;
       img {

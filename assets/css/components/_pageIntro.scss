@@ -37,6 +37,7 @@
 }
 
 .breadcrumb-box {
+  padding-bottom: 24px;
   ol,
   ul {
     justify-content: center;
@@ -48,6 +49,16 @@
     }
   }
 }
+
+.aioseo-breadcrumbs {
+  .aioseo-breadcrumb {
+    color: $color-gray;
+    a {
+      color: $color-primary;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .sub-intro-section {
     .intro-box {

@@ -454,6 +454,7 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
 
 .services-section .services-box {
   text-align: center;
+  justify-content: space-between;
 }
 .services-section .services-box .services-icon {
   margin-bottom: 30px;
@@ -1141,6 +1142,9 @@ html[dir=rtl] .sub-intro-section .intro-box::after {
   font-weight: 800;
 }
 
+.breadcrumb-box {
+  padding-bottom: 24px;
+}
 .breadcrumb-box ol,
 .breadcrumb-box ul {
   justify-content: center;
@@ -1151,6 +1155,13 @@ html[dir=rtl] .sub-intro-section .intro-box::after {
 }
 .breadcrumb-box ol li a,
 .breadcrumb-box ul li a {
+  color: #f1411d;
+}
+
+.aioseo-breadcrumbs .aioseo-breadcrumb {
+  color: #4b4f67;
+}
+.aioseo-breadcrumbs .aioseo-breadcrumb a {
   color: #f1411d;
 }
 
@@ -1306,10 +1317,33 @@ html[dir=rtl] .sub-intro-section .intro-box::after {
   box-shadow: -15px 50px 50px rgba(75, 79, 103, 0.1);
 }
 
+.contact-fom label {
+  color: #2b2e3b !important;
+  margin-bottom: 10px !important;
+}
+.contact-fom input {
+  border-radius: 50px !important;
+}
+.contact-fom textarea {
+  border-radius: 10px !important;
+}
+.contact-fom button {
+  padding: 10px 48px !important;
+  display: inline-block !important;
+  background: linear-gradient(90deg, #4b4f67 0, #2b2e3b 100%) !important;
+  border-radius: 50px !important;
+  color: white !important;
+  box-shadow: rgba(75, 79, 103, 0.3) 4px 4px 0px !important;
+}
+.contact-fom button:active {
+  transform: translate(4px, 4px) !important;
+  box-shadow: rgba(75, 79, 103, 0.3) 0px 0px 0px !important;
+}
+
 .footer-section .footer-list ul li a {
   transition: 0.4s all ease-in-out;
 }
 
-.header-section .open-icon i, .header-section .nav-box .nav-list ul li, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a, .services-section .services-box .services-title, .portfolio-section .portfolio-item, .portfolio-section .portfolio-item:after, .button-item a, .button-play a:after, .button-play a span, .icon-box-side ul li a, .services-section .services-box, .count-section .count-box {
+.header-section .open-icon i, .header-section .nav-box .nav-list ul li, .header-section .nav-box .nav-list ul li a:after, .header-section .nav-box ul li a, .services-section .services-box .services-title, .portfolio-section .portfolio-item, .portfolio-section .portfolio-item:after, .button-item a, .button-play a:after, .button-play a span, .icon-box-side ul li a, .services-section .services-box, .count-section .count-box, .contact-fom button {
   transition: 0.2s all ease-in-out;
 }
