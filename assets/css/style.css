@@ -459,7 +459,7 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   margin-bottom: 30px;
 }
 .services-section .services-box .services-icon img {
-  min-height: 100px;
+  height: 100px;
 }
 .services-section .services-box .services-title {
   font-weight: 800;
@@ -882,7 +882,7 @@ html[dir=ltr] .content-section .section-img:after {
     margin-bottom: 14px;
   }
   .section-title .min-title {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 .button-item.primary-button a {
