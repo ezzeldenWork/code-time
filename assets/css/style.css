@@ -124,6 +124,32 @@ body.over-flow {
     transform: rotate(360deg) scale(1.2);
   }
 }
+@-webkit-keyframes rocket_move {
+  to {
+    bottom: 100%;
+  }
+}
+@keyframes rocket_move {
+  to {
+    bottom: 100%;
+  }
+}
+@-webkit-keyframes satellite-move {
+  37% {
+    transform: translate(-80%, 10%);
+  }
+  74% {
+    transform: translate(-30%, 20%);
+  }
+}
+@keyframes satellite-move {
+  37% {
+    transform: translate(-80%, 10%);
+  }
+  74% {
+    transform: translate(-30%, 20%);
+  }
+}
 @media (max-width: 772px) {
   @-webkit-keyframes translate-position {
     to {
@@ -384,6 +410,7 @@ html[dir=rtl] .footer-section .footer-list ul li:after {
   position: relative;
   z-index: 1;
   padding: 0 0 40px;
+  z-index: 1;
 }
 .intro-section .intro-content .intro-title {
   font-size: 65px;
@@ -411,8 +438,8 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   text-align: end;
 }
 .intro-section .intro-img .intro-img {
-  -webkit-animation: scaleIn 1s ease-in-out infinite;
-          animation: scaleIn 1s ease-in-out infinite;
+  -webkit-animation: scaleIn 0.8s ease-in-out infinite;
+          animation: scaleIn 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;
@@ -426,8 +453,8 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   z-index: 2;
   position: absolute;
   max-height: 100px;
-  -webkit-animation: scaleOut 1s ease-in-out infinite;
-          animation: scaleOut 1s ease-in-out infinite;
+  -webkit-animation: scaleOut 0.8s ease-in-out infinite;
+          animation: scaleOut 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;
@@ -452,6 +479,52 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   bottom: -50px;
 }
 
+.services-section {
+  position: relative;
+}
+.services-section::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/satellite.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 125px;
+  aspect-ratio: 1;
+  right: 0%;
+  top: 0;
+  opacity: 0.8;
+  filter: blur(1px);
+  z-index: -1;
+  transform-origin: -15vw -21vh;
+  -webkit-animation: satellite-move 10s ease-in-out 0s infinite normal;
+          animation: satellite-move 10s ease-in-out 0s infinite normal;
+}
+.services-section:after {
+  -webkit-animation: rocket_move 0.5s ease-in-out infinite;
+          animation: rocket_move 0.5s ease-in-out infinite;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  content: "";
+  position: absolute;
+  background-image: url("../img/rocket.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 125px;
+  aspect-ratio: 1;
+  left: 0;
+  bottom: 0;
+  opacity: 0.8;
+  filter: blur(1px);
+  z-index: -1;
+}
 .services-section .services-box {
   text-align: center;
   justify-content: space-between;
@@ -496,8 +569,8 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   -o-object-fit: cover;
      object-fit: cover;
   width: 245px;
-  -webkit-animation: translate-position 1s ease-in-out infinite;
-          animation: translate-position 1s ease-in-out infinite;
+  -webkit-animation: translate-position 0.8s ease-in-out infinite;
+          animation: translate-position 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;
@@ -520,8 +593,8 @@ html[dir=ltr] .intro-section .intro-content .button-box .button-item {
   background-size: cover;
   background-position: center;
   background-image: url("../img/Pen-Left.png");
-  -webkit-animation: rotate-location 1s ease-in-out infinite;
-          animation: rotate-location 1s ease-in-out infinite;
+  -webkit-animation: rotate-location 0.8s ease-in-out infinite;
+          animation: rotate-location 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;
@@ -547,8 +620,8 @@ html[dir=ltr] .banner-section .banner-content:after {
   background-size: cover;
   background-position: center;
   background-image: url("../img/Gift-Left.png");
-  -webkit-animation: scaleIn 1s ease-in-out infinite;
-          animation: scaleIn 1s ease-in-out infinite;
+  -webkit-animation: scaleIn 0.8s ease-in-out infinite;
+          animation: scaleIn 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;
@@ -997,8 +1070,8 @@ html[dir=ltr] .icon-box-side ul li:last-of-type {
   z-index: 999;
 }
 .newslatter-section .newslatter-box::after {
-  -webkit-animation: rotate-location-revers 1s ease-in-out infinite;
-          animation: rotate-location-revers 1s ease-in-out infinite;
+  -webkit-animation: rotate-location-revers 0.8s ease-in-out infinite;
+          animation: rotate-location-revers 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;
@@ -1111,8 +1184,8 @@ html[dir=rtl] .newslatter-section .newslatter-box::after {
 .sub-intro-section .intro-box::after {
   content: "";
   z-index: -999;
-  -webkit-animation: rotate-location-revers 1s ease-in-out infinite;
-          animation: rotate-location-revers 1s ease-in-out infinite;
+  -webkit-animation: rotate-location-revers 0.8s ease-in-out infinite;
+          animation: rotate-location-revers 0.8s ease-in-out infinite;
   -webkit-animation-delay: calc(var(--scroll) * -1s);
           animation-delay: calc(var(--scroll) * -1s);
   -webkit-animation-play-state: paused;

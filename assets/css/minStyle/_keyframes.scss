@@ -30,6 +30,25 @@
   }
 }
 
+@keyframes rocket_move {
+  to {
+    bottom: 100%;
+  }
+}
+
+@keyframes satellite-move {
+  0% {
+  }
+  37% {
+    transform: translate(-80%, 10%);
+  }
+  74% {
+    transform: translate(-30%, 20%);
+  }
+  100% {
+  }
+}
+
 @media (max-width: 772px) {
   @keyframes translate-position {
     to {
